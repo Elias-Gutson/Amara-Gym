@@ -335,140 +335,65 @@ a{
 
 /*carrusel opiniones*/
 
-/* ======================================================= */
-/* ESTILO GLOBAL DE LA SECCIÓN (BASE OSCURA)               */
-/* ======================================================= */
-.testimonials-section.small-carousel-view {
-    padding: 60px 20px;
-    background-color: #121212; 
-    color: #fff;
-    text-align: center;
+/* SECCIÓN RESEÑAS */
+#reseñas {
+  background-color: black;
+  padding: 60px 0;
+  text-align: center;
 }
 
-.testimonials-section.small-carousel-view h2 {
-    margin-bottom: 40px;
-    font-size: 2.5em;
-    color: #ff4b2b; 
+#reseñas h2 {
+  color: white;
+  margin-bottom: 40px;
+  font-size: 2rem;
 }
 
-/* -------------------------------------- */
-/* SLIDER DE SCROLL-SNAP (¡LO NUEVO!)     */
-/* -------------------------------------- */
-.scroll-carousel {
-    display: flex; /* Coloca todas las tarjetas en una fila */
-    overflow-x: scroll; /* Permite el deslizamiento horizontal */
-    scroll-snap-type: x mandatory; /* El snap obliga a detenerse en cada tarjeta */
-    -webkit-overflow-scrolling: touch; /* Suavidad en dispositivos táctiles */
-    padding-bottom: 20px; /* Espacio para que se vea la barra de scroll (si aplica) */
-    max-width: 500px; /* Limita el ancho del carrusel a un tamaño pequeño */
-    margin: 0 auto; /* Centra el carrusel en la pantalla */
-    gap: 20px; /* Espacio entre las tarjetas */
+.contenedor-reseñas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
-/* Ocultar la barra de desplazamiento en navegadores WebKit (Chrome, Safari) */
-.scroll-carousel::-webkit-scrollbar {
-    display: none;
-}
-/* Ocultar la barra de desplazamiento en IE/Edge/Firefox */
-.scroll-carousel {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-/* -------------------------------------- */
-/* ESTILO DE CADA TARJETA (Review Card)   */
-/* -------------------------------------- */
-.testimonial-card {
-    /* Mantiene tu estilo oscuro */
-    background-color: #1e1e1e; 
-    color: #fff;
-    padding: 30px; 
-    border-radius: 15px;
-    text-align: left;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5); 
-    
-    /* Configuración para que solo se vea una tarjeta */
-    flex: 0 0 100%; /* Ocupa exactamente el 100% del contenedor visible (.scroll-carousel) */
-    width: 100%; /* Ocupa el 100% de su espacio flex */
-    scroll-snap-align: center; /* Asegura que la tarjeta se alinee al centro de la ventana de scroll */
-    
-    /* Mantenemos tu transición para el hover */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; 
+.card-reseña {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 25px 30px;
+  border-radius: 15px;
+  width: 350px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  text-align: center;
+  font-size: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-/* Estilo HOVER (al pasar el ratón) - Se mantiene el diseño vibrante */
-.testimonial-card:hover {
-    transform: none; /* Quitamos la elevación ya que podría interferir con el scroll */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
-    background: linear-gradient(135deg, #ff4b2b, #ff416c); 
+.card-reseña:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
 }
 
-/* -------------------------------------- */
-/* DETALLES INTERNOS (Se mantienen)       */
-/* -------------------------------------- */
-.card-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+.card-reseña h4 {
+  margin-top: 20px;
+  color: gray;
+  font-weight: normal;
 }
 
-.reviewer-photo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%; 
-    object-fit: cover;
-    margin-right: 20px;
-    border: 3px solid #ff4b2b; 
+.btn-reseñas {
+  display: inline-block;
+  background-color: #9E0916;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.reviewer-info h4 {
-    margin: 0;
-    font-size: 1.2em;
-    color: #fff;
-}
-
-.stars-rating {
-    color: gold; 
-    font-size: 1.1em;
-    margin: 5px 0;
-}
-
-.source {
-    font-size: 0.9em;
-    color: #aaa;
-    margin: 0;
-}
-
-.review-text {
-    font-style: italic;
-    color: #ccc;
-    line-height: 1.6;
-    font-size: 1.1em;
-}
-
-/* -------------------------------------- */
-/* BOTÓN CTA (Se mantiene el estilo)      */
-/* -------------------------------------- */
-.cta-reviews {
-    margin-top: 40px; /* Reducimos el margen para ocupar menos espacio */
-}
-
-.main-cta-btn {
-    display: inline-block;
-    padding: 15px 35px;
-    background: linear-gradient(90deg, #ff4b2b, #ff416c);
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 1.1em;
-    box-shadow: 0 4px 10px rgba(255, 75, 43, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.main-cta-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(255, 65, 108, 0.6);
+.btn-reseñas:hover {
+  background-color: #ff416c;
+  transform: scale(1.05);
 }
 
 
