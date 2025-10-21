@@ -33,6 +33,31 @@ body{
   margin-right: 20px;
 }
 
+
+.header1 {
+  background: rgba(158, 9, 22, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+/*PRUEBA NAVBAR*/
+
+.header1 {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(158, 9, 22, 0.4); /* más transparente al inicio */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: background 0.2s ease, backdrop-filter 0.2s ease, transform 0.2s ease;
+}
+
+
 /*CARROUSEL*/
 
 .carrusel {
@@ -335,7 +360,6 @@ a{
 
 /*carrusel opiniones*/
 
-/* SECCIÓN RESEÑAS */
 #reseñas {
   background-color: black;
   padding: 60px 0;
