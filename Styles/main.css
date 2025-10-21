@@ -6,6 +6,7 @@
 
 body{
     background-color: black;
+    font-family: 'Oswald', sans-serif;
 }
 
 /*NAVBAR*/
@@ -187,8 +188,16 @@ ul{
   color: white;
   padding: 20px;
   text-align: center;
+  
+  
 }
 
+.promo:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 /*CARD-SECTION*/
 
