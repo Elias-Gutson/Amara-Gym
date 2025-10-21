@@ -9,6 +9,9 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 
+
+
+
 /*NAVBAR*/
 
 .header1{
@@ -421,6 +424,7 @@ a{
   border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 25px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -428,6 +432,5 @@ a{
   background-color: #ff416c;
   transform: scale(1.05);
 }
-
 
 
